@@ -1,0 +1,355 @@
+:root{
+    font-family: sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: 400px 1fr; 
+    gap: 20px;
+    padding: 10px;
+    grid-template-areas: 
+    "side header header"
+    "side content content"
+    ; 
+    height: fit-content;
+    grid-template-rows: auto auto;
+
+}
+
+.header {
+    grid-area: header;
+    height: fit-content;
+    padding: 80px 0 0 150px;
+    display: grid;
+}
+.fir{
+    height: 200px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin: 0;
+}
+
+.search-area{
+    width: 350px;
+    height: 70px;
+    border: 2px rgb(128, 128, 128) solid;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    justify-items: center;
+}
+.search-icon{
+    background-image: url(Images/magnifying-glass.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px
+}
+.search-area input{
+    width: 280px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+.fir::after {
+    content: '';
+    display: block;
+    width: 120%;
+    height: 1px;
+    background-color: black;
+    margin-top: -30px;
+}
+
+
+.profile{
+    width: 350px;
+    height: 80px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: center;
+}
+.profile-photo{
+    background-image: url(Images/profile.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin-top: 5px;
+}
+.profile span{
+    display: block;
+    color: rgb(128, 128, 128);
+    font-size: 20px;
+    margin: 0;
+}
+.profile p{
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    margin-top: -50px;
+    text-align: center;
+    gap: 20px;
+}
+.all{
+    border-radius: 30px;
+    width: 70px;
+    height: 50px;
+    border: 1px rgb(128, 128, 128) solid;
+    text-align: center;
+    color: rgb(128, 128, 128);
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.abstract{
+    border-radius: 30px;
+    width: 120px;
+    height: 50px;
+    border: 1px rgb(128, 128, 128) solid;
+    text-align: center;
+    color: rgb(128, 128, 128);
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: -20px;
+}
+
+.nature{
+    border-radius: 30px;
+    width: 110px;
+    height: 50px;
+    border: 1px rgb(128, 128, 128) solid;
+    text-align: center;
+    color: rgb(128, 128, 128);
+    font-size: 20px;
+    margin-left: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.add{
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    border: 1px rgb(128, 128, 128) solid;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.add img{
+    height: 20px;
+}
+
+.all:hover, .abstract:hover, .nature:hover{
+    color: white;
+    background-color: blue;
+}
+.side {
+    grid-area: side;
+    height: 100%;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.up{
+    height: fit-content;
+    display: grid;
+    grid-row: 1;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.down{
+    height: fit-content;
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -300px;
+}
+.title{
+    display: flex;
+    gap:10px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    height: 75px;
+    width: 75px;
+    background-image: url(Images/logo.png);
+    background-size: cover;
+}
+.title p{
+    display: inline;
+    font-size: 40px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.createB{
+    display: flex;
+    gap:10px;
+    height: 75px;
+    width: 300px;
+    border-radius: 20px;
+    color: white;
+    background-color: blue;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.createB img{
+    height: 45px;
+}
+
+.homeB{
+    display: flex;
+    gap:10px;
+    height: 75px;
+    width: 300px;
+    border-radius: 20px;
+    color: rgb(128, 128, 128);
+    background-color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.homeB img{
+    height: 35px;
+    margin: 18px 0 0 10px;
+}
+
+.collection,.downloads,.chat,.history,.settings,.logout{
+    display: flex;
+    gap:10px;
+    height: 75px;
+    width: 300px;
+    border-radius: 20px;
+    color: rgb(128, 128, 128);
+    background-color: whitesmoke;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.collection img, .downloads img, .chat img, .history img, .settings img, .logout img{
+    height: 35px;
+    margin: 18px 0 0 10px;
+}
+
+.footer{
+    display: grid;
+    gap: 10px;
+}
+
+.content {
+    grid-area: content;
+    height: fit-content;
+    padding: 80px 0 0 150px;
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(3,auto);
+    grid-template-columns: repeat(4,auto);
+    grid-auto-flow: column;
+}
+.st{
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-rows: (2, auto);
+    grid-auto-flow: row;
+
+}
+.image {
+    grid-row: 1;
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.image-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(234, 233, 233);
+    opacity: 1;
+}
+.image img{
+    position: relative;
+    z-index: 1;
+    border-radius: 30px;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+.info{
+    grid-row: 2;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1fr ;
+    gap: 100px;
+}
+.owners{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 80px;
+    margin-top: 15px;
+    column-gap: 10px;
+    margin-left: 20px;
+}
+.owners img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    grid-column: 1;
+}
+.owners p{
+    display: inline;
+    font-size: 25px;
+    font-weight: 600;
+}
+.reacts{
+    grid-column: 2;
+    margin-top: 40px;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 0;
+}
+.reacts img{
+    height: 30px;
+    width: 30px;
+    margin: 0;
+}
+.reacts span{
+    margin-left: 0;
+    margin-top: 5px;
+    color: rgb(128, 128, 128);
+}
