@@ -1,0 +1,118 @@
+:root{
+    --background_color: rgb(188, 228, 241);
+    --main_color: rgb(208, 155, 182);
+    background-color: var(--background_color);
+
+}
+.parent{
+    background-color: var(--main_color);
+    width: 1300px;
+    height: 550px;
+    border-radius: 30px;
+    position: relative;
+    margin-left: 100px;
+    margin-top: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logo{
+    text-indent: 100px;
+    display: inline;
+    position: absolute;
+    font-size: 25px;
+}
+.head a{
+    left: 425px;
+    display: inline;
+    font-size: 20px;
+    top: 20px;
+    position: relative;
+    margin: 0px 20px;
+    color: black;
+    text-decoration: none;
+}
+.head a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: black;
+    left: 0;
+    bottom: -5px;
+}
+.head a:hover::before{
+    width: 100%;
+}
+.loginB{
+    position: absolute;
+    right: 200px;
+    top: 10px;
+    height: 35px;
+    width: 50px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--background_color);
+}
+.loginB:hover{
+    background-color: black;
+    color: white;
+}
+.RegisterB{
+    position: absolute;
+    right: 110px;
+    top: 10px;
+    height: 35px;
+    width: 60px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--background_color);
+}
+.RegisterB:hover{
+    background-color: black;
+    color: white;
+}
+.name{
+    position: absolute;
+    font-size: 30px;
+    letter-spacing: 15px;
+    left: 50%;
+    transform: translate(-50%,0);
+    line-height:100px;
+    font-weight: bold;
+}
+.Eng-content{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 150px;
+}
+.Ar-content{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 180px;
+    direction: rtl;
+}
+.startingB{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 43%;
+    height: 35px;
+    width: 130px;
+    border-radius: 13px;
+    border: none;
+    background-color: var(--background_color);
+}
+.startingB:hover{
+    background-color: black;
+    color: white;
+}
+.note{
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translate(-50%,-50%);
+    -webkit-text-stroke: var(--background_color) 1px;
+    color: transparent;
+    font-size: 20px;
+}

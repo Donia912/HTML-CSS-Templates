@@ -1,0 +1,30 @@
+@import url(index.css);
+:root{
+    background-color: var(--background_color);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+div{
+    background-color: var(--main_color);
+    height: 400px;
+    width:300px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+input{
+    margin: 0px 0px 20px 30px;
+    height: 15px;
+    width: 15px;
+}
+label{
+    margin: 20px 0px;
+}
+input:checked + label{
+    color: darkgreen;
+    text-decoration: line-through;
+}
+h1{
+    margin: 30px 65px;
+}
