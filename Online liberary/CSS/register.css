@@ -1,0 +1,66 @@
+html{
+  --transition: 0.30s;
+  --shadowcolor: rgb(61, 29, 35);
+}
+form {
+  border: 10%;
+  width: 450px;
+  height: 950px;
+  background-color: rgb(205, 133, 63);
+  text-align: center;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 0 -5px 30px 0 var(--shadowcolor);
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  margin: 15px auto;
+  width: 50%;
+  height: 30px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 20px;
+  outline: none;
+  background-color: rgb(248, 215, 183);
+}
+label {
+  font-size: 20px;
+  /*text-shadow: 1px 1px 3px palevioletred;*/
+}
+.button {
+  font-family: "Times New Roman", Times, serif;
+  border-color: black;
+  border-radius: 50px;
+  color: black;
+  padding: 5px 140px;
+  display: inline-block;
+  font-size: 33px;
+  background-color: rgb(253, 197, 141);
+  cursor: pointer;
+  text-decoration-line: none;
+  text-align: center;
+  font-style: unset;
+  margin: 22px 0 5px 0;
+  box-shadow: 0 0px 20px 0 var(--shadowcolor);
+}
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type= "tel"]:focus {
+  border-color: rgb(60, 216, 255);
+  width: 300px;
+}
+h1 {
+  padding-top: 15px;
+  font-size: 42px;
+}
+h2 {
+  font-size: 30px;
+}
+p {
+  font-size: 22px;
+}
