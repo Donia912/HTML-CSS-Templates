@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'youngserif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+@font-face{
+    font-family: 'outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+:root{
+    --Dark_Raspberry: hsl(332, 51%, 32%);
+    --Rose_White: hsl(330, 100%, 98%);
+    --Wenge_Brown: hsl(30, 10%, 34%);
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Eggshell: hsl(30, 54%, 90%);
+    background-color: var(--Eggshell);
+    padding-top: 100px;
+}
+.main-parent{
+    width: 750px;
+    margin: 0 auto;
+    height: 1750px;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+}
+.image{
+    background-image: url(assets/images/image-omelette.jpeg);
+    background-size: 100%;
+    width: 660px;
+    height: 300px;
+    margin-top: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 20px;
+}
+.parent{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 660px;
+    height: 200px;
+}
+.parent h1{
+    font-family:'youngserif', sans-serif;
+    font-weight: 400;
+    position: absolute;
+    top: 360px;
+}
+.intro{
+    font-family: 'outfit',sans-serif;
+    font-weight: 400;
+    color:var(--Wenge_Brown);
+    position: absolute;
+    top: 420px;
+}
+.preparation-time{
+    background-color: var(--Rose_White);
+    font-family: 'outfit',sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    position: absolute;
+    top: 520px;
+    width: 660px;
+    height: 200px;
+    color: var(--Dark_Raspberry);
+}
+.preparation-time h3{
+    margin-left: 30px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+.preparation-time ul{
+    list-style-type: none;
+    margin-left: 30px;
+}
+.preparation-time span{
+    color:var(--Wenge_Brown);
+    margin-left: 20px;
+    font-weight: 700;
+}
+.preparation-time li{
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: var(--Wenge_Brown);
+}
+.preparation-time li::before{
+    content: '•';
+    color: var(--Dark_Raspberry);
+    font-size: 20px;
+    margin-left: -35px;
+}
+.ingredients{
+    position: absolute;
+    top: 750px;
+    font-family: 'youngserif';
+    font-size: 27px;
+    color: var(--Nutmeg);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    width: 660px;
+    height: 200px;
+}
+.ingredients li{
+    font-size: 16px;
+    font-family: 'outfit',sans-serif;
+    color: var(--Wenge_Brown);
+    font-weight: 400;
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+.ingredients li::before{
+    content: '•';
+    color: var(--Nutmeg);
+    font-size: 20px;
+    margin-left: -35px;
+    margin-right: 20px;
+}
+.ingredients li:first-child{
+    margin-top: -10px;
+}
+hr{
+    background-color: var(--Light-Grey);
+}
+.first-line{
+    margin-top: 980px;
+}
+.instructions{
+    position: absolute;
+    top: 1010px;
+    font-family: 'youngserif';
+    font-size: 27px;
+    color: var(--Nutmeg);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    width: 660px;
+    counter-reset: list-counter;
+}
+.instructions span{
+    font-weight: 700;
+}
+.instructions li{
+    font-size: 16px;
+    font-family: 'outfit',sans-serif;
+    color: var(--Wenge_Brown);
+    font-weight: 400;
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+.instructions li::before{
+    content: counter(list-counter) ".";
+    counter-increment: list-counter;
+    color: var(--Nutmeg);
+    font-size: 20px;
+    margin-left: -35px;
+    margin-right: 20px;
+}
+.second-line{
+    margin-top: 415px;
+}
+.Nutrition{
+    position: absolute;
+    width: 660px;
+    top:1425px;
+    font-family: 'youngserif';
+    font-weight: 400;
+    font-size: 27px;
+    color: var(--Nutmeg);
+}
+.Nutrition p{
+    font-family: 'outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--Wenge_Brown);
+}
+.Nutrition span{
+    font-weight: 700;
+    color: var(--Nutmeg);
+    margin-left: 280px;
+}
+.attribution{ 
+    font-size: 20px; text-align: center; 
+    margin-top: 380px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
