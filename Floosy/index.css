@@ -1,0 +1,210 @@
+:root {
+    --main_color: rgb(90, 90, 210);
+    --text_color: black;
+    --background_color: white;
+    --shadow_color: rgb(90, 90, 210);
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--text_color);
+    background-color: var(--background_color);
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+}
+
+body.dark-mode {
+    --main_color: rgb(82, 88, 178);
+    --text_color: white;
+    --background_color: black;
+    --shadow_color: rgb(210, 210, 210);
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+header{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+nav button{
+    background-color: var(--background_color);
+    position: relative;
+    height: 70px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 40px;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.4 ease-in-out;
+    color: var(--text_color);
+}
+nav button.active{
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 30px var(--main_color);
+}
+nav button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 0;
+    height: 4px;
+    background-color: black;
+    transition: width 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+nav button:not(.active):hover::after{
+    width: 100%;
+}
+nav{
+    display: flex;
+    gap: 50px;
+    margin-top: 10px;
+}
+.logo{
+    display: flex;
+    gap: 30px;
+}
+header .logo span{
+    font-size: 50px;
+    color: rgb(94, 69, 206);
+    font-weight: 600;
+    margin-top: 10px;
+}
+.reg-buttons{
+    display: flex;
+    gap: 25px;
+}
+.reg-buttons button{
+    background-color: var(--main_color);
+    height: 80px;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 3px;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 35px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.4s ease-in-out;
+}
+.reg-buttons button:hover{
+    color: black;
+    transform: scale(0.95);
+}
+
+section{
+    display: grid;
+    justify-content: space-around;
+    grid-auto-flow: column;
+    column-gap: 700px;
+}
+
+.side{
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+.side.rtl{
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+.side h1{
+    font-size: 95px;
+    margin: 0;
+    display: inline;
+}
+.side span{
+    color: var(--main_color);
+    font-size: 95px;
+    font-weight: 600;
+
+}
+.side p{
+    font-size: 40px;
+    color: rgb(110, 110, 110);
+}
+.side button{
+    background-color: var(--main_color);
+    height: 85px;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 35px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.4s ease-in-out;
+}
+.side button:hover{
+    color: black;
+    transform: scale(0.95);
+}
+
+.images{
+    grid-area: content;
+    margin-top: 350px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 120px;
+    direction: ltr;
+}
+
+.img1, .img2, .img3{
+    background-size: contain;
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0px 0px 25px var(--shadow_color));
+}
+.img1{
+    background-image: url(dollar.png);
+    grid-column: 1 / 2;
+}
+.img2{
+    background-image: url(sterling.png);
+    margin-top: 100px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.img3{
+    background-image: url(euro.png);
+    margin-top: -20px;
+    grid-column: 3 / 4;
+}
+footer{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 100%;
+    display: grid;
+    justify-content: end;
+    row-gap: 20px;
+    direction: ltr;
+}
+footer button{
+    width: 95px;
+    height: 95px;
+    background-color: var(--main_color);
+    border-radius: 50px;
+    cursor: pointer;
+}
+footer button:hover{
+    background-color: rgb(113, 113, 215);
+}
