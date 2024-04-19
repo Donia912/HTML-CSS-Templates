@@ -1,0 +1,346 @@
+:root{
+    --Dark_Raspberry: hsl(332, 51%, 32%);
+    --Rose_White: hsl(330, 100%, 98%);
+    --Wenge_Brown: hsl(30, 10%, 34%);
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Eggshell: hsl(30, 54%, 90%);
+}
+.parent{
+    display: grid;
+    gap: 20px;
+}
+.navbar{
+    height: fit-content;
+    display:grid;
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+}
+.logo{
+    height: 130px;
+    width: 430px;
+    background-image: url(images/logo.png);
+    background-size: cover;
+    flex: 0 1 100;
+    margin-left: -500px;
+}
+
+.options{
+    display: flex;
+    gap: 50px;
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+.options a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    flex: 0 1 100;
+}
+.options a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.options a:hover::after{
+    width: 100%;
+}
+
+.options a:nth-child(1):after {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    left: 50%;
+}
+.cover{
+    display: flex;
+    justify-content: space-between;
+}
+.cover-image{
+    background-image: url(images/wp7709844.png);
+    background-size: cover;
+    height: 700px;
+    width: 900px;
+    border-top-left-radius: 50%;
+}
+.title{
+    margin-left: 200px;
+    margin-top: 150px;
+    font-family: sans-serif;
+}
+.title p{
+    font-size: 30px;
+}
+.title span{
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 15px;
+}
+.title button{
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    height: 70px;
+    width: 300px;
+    font-size: 22px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 15px 20px rgb(135, 135, 135);
+    transition: box-shadow 0.3s ease;
+}
+.title button:hover{
+        box-shadow: 0px 20px 30px rgb(135, 135, 135);
+}
+.about{
+    background-color: white;
+    display: grid;
+    justify-content: space-around;
+    grid-auto-flow: column;
+    width: 2000px;
+    border-radius: 80px;
+    justify-self: center;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    box-shadow: 0 15px 20px rgb(187, 187, 187);
+    transition: box-shadow 0.3s ease;
+}
+.about:hover{
+    box-shadow: 0px 20px 30px rgb(135, 135, 135);
+}
+.about-image{
+    background-image: url(images/pexels-valeria-boltneva-842571.jpg);
+    background-size: cover;
+    height: 750px;
+    width: 900px;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+}
+.content{
+    font-size: 35px;
+    font-family: sans-serif;
+    padding: 120px;
+}
+.content span{
+    display: block;
+    left: 50%;
+    transform: translate(0,-50%);
+    font-weight: 700;
+    font-size: 50px;
+}
+.title2 {
+    font-size: 70px;
+    display: block;
+    justify-self: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: brown;
+}
+.top-recipes{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+}
+
+.Recipe1,.Recipe2,.Recipe3{
+    width: 730px;
+    height: fit-content;
+    border-radius: 20px;
+    background-color: rgb(247, 247, 247);
+    padding-bottom: 20px;
+    display: grid;
+    box-shadow: 0 15px 20px rgb(187, 187, 187);
+    transition: box-shadow 0.3s ease;
+}
+.Recipe1:hover,.Recipe2:hover,.Recipe3:hover{
+    box-shadow: 0px 20px 30px rgb(135, 135, 135);
+}
+.Recipe1 .image{
+    background-image: url(images/image-omelette.jpeg);
+    background-size: 100%;
+    width: 660px;
+    height: 300px;
+    margin-top: 50px;
+    justify-self: center;
+    border-radius: 20px;
+}
+
+.dish-name{
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+.intro{
+    font-family: sans-serif;
+    color:var(--Wenge_Brown);
+    line-height: 23px;
+    margin-left: 50px;
+}
+.preparation-time{
+    background-color: hsl(330, 55%, 96%);
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    justify-self: center;
+    margin-top: 20px;
+    width: 660px;
+    height: 200px;
+    color: var(--Dark_Raspberry);
+}
+.preparation-time h3{
+    margin-left: 30px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+.preparation-time ul{
+    list-style-type: none;
+    margin-left: 30px;
+}
+.preparation-time span{
+    color:var(--Wenge_Brown);
+    margin-left: 20px;
+    font-weight: 700;
+}
+.preparation-time li{
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: var(--Wenge_Brown);
+}
+.preparation-time li::before{
+    content: '•';
+    color: var(--Dark_Raspberry);
+    font-size: 20px;
+    margin-left: -35px;
+}
+.ingredients{
+    font-family: 'youngserif';
+    justify-self: center;
+    margin-top: 20px;
+    font-size: 27px;
+    color: var(--Nutmeg);
+    font-weight: 400;
+    padding: 0;
+    width: 660px;
+    height: 200px;
+}
+.ingredients li{
+    font-size: 16px;
+    font-family: 'outfit',sans-serif;
+    color: var(--Wenge_Brown);
+    font-weight: 400;
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+.ingredients li::before{
+    content: '•';
+    color: var(--Nutmeg);
+    font-size: 20px;
+    margin-left: -35px;
+    margin-right: 20px;
+}
+.ingredients li:first-child{
+    margin-top: -10px;
+}
+hr{
+    background-color: var(--Light-Grey);
+}
+
+.instructions{
+    font-family: 'youngserif';
+    justify-self: center;
+    font-size: 27px;
+    color: var(--Nutmeg);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    width: 660px;
+    counter-reset: list-counter;
+}
+.instructions span{
+    font-weight: 700;
+}
+.instructions li{
+    font-size: 16px;
+    font-family: 'outfit',sans-serif;
+    color: var(--Wenge_Brown);
+    font-weight: 400;
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+.instructions li::before{
+    content: counter(list-counter) ".";
+    counter-increment: list-counter;
+    color: var(--Nutmeg);
+    font-size: 20px;
+    margin-left: -35px;
+    margin-right: 20px;
+}
+
+.Nutrition{
+    width: 660px;
+    font-family: 'youngserif';
+    justify-self: center;
+    font-weight: 400;
+    font-size: 27px;
+    color: var(--Nutmeg);
+}
+.Nutrition p{
+    font-family: 'outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--Wenge_Brown);
+}
+.Nutrition span{
+    font-weight: 700;
+    color: var(--Nutmeg);
+    margin-left: 280px;
+}
+.Recipe2 .image{
+    background-image: url(images/45-Tacos-meat-and-vegetable.jpg);
+    background-size: 100%;
+    width: 660px;
+    height: 300px;
+    margin-top: 50px;
+    justify-self: center;
+    border-radius: 20px;
+}
+.Recipe3 .image{
+    background-image: url(images/Grilled-Cajun-Shrimp-011-1140x1425.jpg);
+    background-size: cover;
+    width: 660px;
+    height: 350px;
+    margin-top: 50px;
+    justify-self: center;
+    border-radius: 20px;
+}
+.author{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+.author p{
+    display: inline;
+    color: black;
+}
+.author a{
+    text-decoration: none;
+    color: brown;
+}
+.author img{
+    width: 30px;
+}
